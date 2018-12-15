@@ -5,9 +5,11 @@ Utiliza sessões, PDO e algumas funções básicas que serão descritas aqui nes
 
 ## Imagens
 **Computador**
+
 ![Computador](https://i.ibb.co/ck2FFtH/F-brica-de-Bicicletas-Google-Chrome-2.jpg)
 
 **Celular**
+
 ![Celular](https://i.ibb.co/s2hGLGJ/F-brica-de-Bicicletas-Google-Chrome.jpg)
 
 ## Versão
