@@ -26,13 +26,16 @@ class controller
 		include APP_PATH . 'views/'.$viewName.'.phtml';
 	}
 
-
+	// Método de carregamento de template + dados
+	// template esse que foi configurado lá no config.php
 	public function loadTemplate($viewName, $viewData = array())
 	{
 		extract($viewData);
 		include APP_PATH . TEMPLATEBASE;
 	}
 
+	// Método de carregamento de uma view dentro de um template, similar ao método
+	// loadView
 	public function loadViewInTemplate($viewName, $viewData = array())
 	{
 		extract($viewData);

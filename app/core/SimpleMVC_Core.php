@@ -1,46 +1,38 @@
 <?php
-class Core {
+include 'Controller.php';
 
-	public function loadView($viewName, $viewData = array())
-	{
-		extract($viewData);
-		include APP_PATH . 'views/'.$viewName.'.phtml';
-	}
-
-	public function loadTemplate($viewName, $viewData = array())
-	{
-		include APP_PATH . 'views/template.phtml';
-	}
-
-	public function loadViewInTemplate($viewName, $viewData = array())
-	{
-		extract($viewData);
-		include APP_PATH . 'views/'.$viewName.'.phtml';
-	}
-
-	public function run()
+class SimpleMVC_Core extends Controller
+{
+	public function execute_and_run()
 	{
 		$url = explode("index.php", $_SERVER["PHP_SELF"]);
 		$url = end($url);
 		$params = array();
 
-		if(!empty($url)) {
+		if(!empty($url))
+		{
 			$url = explode('/', $url);
 			array_shift($url);
 			$currentController = $url[0].'Controller';
 			array_shift($url);
 
-			if(isset($url[0])) {
+			if(isset($url[0]))
+			{
 				$currentAction = $url[0];
 				array_shift($url);
-			} else {
+			}
+			else
+			{
 				$currentAction = 'index';
 			}
 
-			if(count($url) > 0) {
+			if(count($url) > 0)
+			{
 				$params = $url;
 			}
-		} else {
+		}
+		else
+		{
 			$currentController = 'homeController';
 			$currentAction = 'index';
 		}

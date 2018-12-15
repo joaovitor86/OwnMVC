@@ -31,5 +31,5 @@ spl_autoload_register(function ($class) {
 date_default_timezone_set(TIMEZONE);
 
 // Core
-$core = new Core();
-$core->run();
+$SimpleMVC_Core = new SimpleMVC_Core();
+$SimpleMVC_Core->execute_and_run();
