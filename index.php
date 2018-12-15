@@ -13,7 +13,6 @@ spl_autoload_register(function ($class) {
     }
     else
     {
-      //die("<p><small>404</small>Que coisa mais estranha!</p>");
       $tools = new Tools();
       $tools->error404();
     }
