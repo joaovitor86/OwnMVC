@@ -32,7 +32,10 @@ class meucontrollerController extends controller
 
    public function index()
    {
-      $dados = array();
+      $dados = array(
+        'titulo_da_pagina' => 'Oá, seja muito bem vindo!',
+        'mensagem_da_pagina' => 'Você está na home do site, navegue através do menu à cima.'
+      );
       $this->loadView('nomedaview', $dados);
       //ou
       $this->loadTemplate('nomedaviewtemplate', $dados);
@@ -64,6 +67,19 @@ class Meumodel extends model
 **View**
 
 *Como em qualquer outro MVC de PHP, você faz o seu view em HTML com auxílio de javascript e css, talvez use bootstrap, etc. Aqui não é diferente, haja vista que no arquivo ***config.php*** você tem todas as configurações de pastas assets onde estarão alojados esses mesmos arquivos.*
+
+```html
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title><?php echo $titulo_da_pagina; ?></title>
+  </head>
+  <body>
+    <?php echo $mensagem_da_pagina; ?>
+  </body>
+</html>
+```
 
 # Você também pode colaborar!
 Colabore com o projeto e ajude o mesmo a se tornar um framework simples porém eficaz!
