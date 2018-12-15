@@ -4,8 +4,8 @@ OwnMVC é um MVC simples, focado na produção, sem muitos recursos, talvez um f
 Utiliza sessões, PDO e algumas funções básicas que serão descritas aqui nesse **README**.
 
 ## Imagens
-!(Computador)[https://i.ibb.co/ck2FFtH/F-brica-de-Bicicletas-Google-Chrome-2.jpg]
-!(Celular)[https://i.ibb.co/s2hGLGJ/F-brica-de-Bicicletas-Google-Chrome.jpg]
+![Computador](https://i.ibb.co/ck2FFtH/F-brica-de-Bicicletas-Google-Chrome-2.jpg)
+![Celular](https://i.ibb.co/s2hGLGJ/F-brica-de-Bicicletas-Google-Chrome.jpg)
 
 ## Versão
 
