@@ -1,0 +1,88 @@
+<div class="jumbotron">
+  <div class="container">
+    <h1 class="display-3"><?php echo $Titulo; ?></h1>
+    <p>Controle de ponto de funcionários temporários para a empresa VeroRH de São Paulo.<br>
+    Atualmente realizando serviço para a EAD Seja Digital, na agência dos Correios na cidade de Descalvado - São Paulo.</p>
+    <p><a class="btn btn-primary btn-lg" href="http://www.sejadigital.com.br" target="_blank" role="button">Conheça o Seja Digital »</a></p>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="row">
+
+    <form class="col-md-6" action="/home/marcaponto" method="post">
+      <input type="hidden" id="data" name="data" value="<?php echo date('d/m/Y'); ?>">
+      <input type="hidden" id="hora" name="hora" value="<?php echo date('H:i'); ?>">
+
+      <h3>Marcar ponto de funcionário</h3>
+      
+      <div class="form-group">
+        <label for="func">Selecione o funcionário</label>
+        <select class="form-control" name="func" id="func">
+          <option value="" selected>-- Selecione --</option>
+          <?php
+          foreach ($funcionariosHome as $value):
+            echo "<option value=\"{$value['id']}\">{$value['nome']}</option>\n";
+          endforeach;
+          ?>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <div class="alert alert-warning" role="alert">
+          Data: <?php echo date('d/m/Y'); ?> | Hora: <?php echo date('H:i'); ?>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Gravar</button>
+    </form>
+
+    <div class="col-md-6">
+      <h3>Pontos marcados de hoje: <span class="badge badge-secondary"><?php echo date('d/m/Y'); ?></span></h3>
+      <table class="table table-hover table-striped">
+
+        <thead class="thead-light">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Funcionário</th>
+            <th scope="col">Data</th>
+            <th scope="col">Hora</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>João Vitor de Souza Santos</td>
+            <td>15/09/2018</td>
+            <td>21:45</td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>João Vitor de Souza Santos</td>
+            <td>15/09/2018</td>
+            <td>21:45</td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>João Vitor de Souza Santos</td>
+            <td>15/09/2018</td>
+            <td>21:45</td>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>João Vitor de Souza Santos</td>
+            <td>15/09/2018</td>
+            <td>21:45</td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div>
+
+    </div>
+
+  </div>
+  <hr>
+</div>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Erro 404 - Não encontrado!</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="<?php echo ASSETS_PATH; ?>vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+	<style>
+	.error-template {padding: 40px 15px;text-align: center;}
+	.error-actions {margin-top:15px;margin-bottom:15px;}
+	.error-actions .btn { margin-right:10px; }
+	</style>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <?php $this->loadView("include/navbar"); ?>
+    </nav>
+
+    <!-- Page Content -->
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="error-template">
+					<h1>
+						Oops!</h1>
+					<h2>
+						404 Não encontrado!</h2>
+					<div class="error-details">
+						Desculpe, um erro ocorreu, a página solicitada não foi encontrada!
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="<?php echo ASSETS_PATH; ?>vendor/jquery/jquery.min.js"></script>
+    <script src="<?php echo ASSETS_PATH; ?>vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>

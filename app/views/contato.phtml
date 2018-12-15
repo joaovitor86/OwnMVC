@@ -1,0 +1,86 @@
+<!-- Page Heading/Breadcrumbs -->
+<h1 class="mt-4 mb-3">Contato
+  <small></small>
+</h1>
+
+<ol class="breadcrumb">
+  <li class="breadcrumb-item">
+    <a href="/">Home</a>
+  </li>
+  <li class="breadcrumb-item active">Contato</li>
+</ol>
+
+<!-- Content Row -->
+<div class="row">
+  <!-- Map Column -->
+  <div class="col-lg-8 mb-4">
+    <!-- Embedded Google Map -->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d236954.50913298712!2d-47.79112477338657!3d-21.88012010860681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94b80e4e7a22b829%3A0x86b568ab73333568!2sDescalvado+-+State+of+S%C3%A3o+Paulo%2C+13690-000!5e0!3m2!1sen!2sbr!4v1544292169705" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </div>
+  <!-- Contact Details Column -->
+  <div class="col-lg-4 mb-4">
+    <h3>Nossos contatos</h3>
+    <p>
+      Centro
+      <br>Descalvado, SP / 13690-000
+      <br>
+    </p>
+    <p>
+      <abbr title="Telefone">T</abbr>: (19) 3583-1234
+    </p>
+    <p>
+      <abbr title="Email">E</abbr>:
+      <a href="mailto:email@example.com">email@example.com
+      </a>
+    </p>
+    <p>
+      <abbr title="Horário de Funcionamento">H</abbr>: Segunda - Sexta: 9:00h às 17:00h
+    </p>
+  </div>
+</div>
+<!-- /.row -->
+
+<!-- Contact Form -->
+<!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+<div class="row">
+  <div class="col-lg-8 mb-4">
+
+    <?php if($success === true): ?>
+      <div id="success" class="alert alert-success" role="alert">Obrigado <?php echo $dadosContato['nome']; ?>!<br>Sua mensagem foi enviada e embreve vamos retornar.</div>
+    <?php endif; ?>
+
+    <h3>Se preferir, mande uma mensagem</h3>
+    <form name="sentMessage" id="contactForm" method="POST" action="/contato/enviar">
+      <div class="control-group form-group">
+        <div class="controls">
+          <label>Seu nome completo:</label>
+          <input name="nome" type="text" class="form-control" id="nome" required data-validation-required-message="Por favor, insira seu nome completo.">
+          <p class="help-block"></p>
+        </div>
+      </div>
+      <div class="control-group form-group">
+        <div class="controls">
+          <label>Seu(s) telefone(s):</label>
+          <input name="telefone" type="tel" class="form-control" id="telefone" required data-validation-required-message="Por favor, insira o(s) seu(s) número(s) de telefone.">
+        </div>
+      </div>
+      <div class="control-group form-group">
+        <div class="controls">
+          <label>E-mail para contato:</label>
+          <input name="email" type="email" class="form-control" id="email" required data-validation-required-message="Por favor, insira o seu e-mail.">
+        </div>
+      </div>
+      <div class="control-group form-group">
+        <div class="controls">
+          <label>Menssagem:</label>
+          <textarea name="mensagem" rows="10" cols="100" class="form-control" id="mensagem" required data-validation-required-message="Por favor, digite uma mensagem de até 999 caractéres." maxlength="999" style="resize:none"></textarea>
+        </div>
+      </div>
+
+      <!-- For success/fail messages -->
+      <button type="submit" class="btn btn-primary" id="sendMessageButton">Enviar</button>
+    </form>
+  </div>
+
+</div>
+<!-- /.row -->
