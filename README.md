@@ -61,6 +61,10 @@ class Meumodel extends model
 }
 ```
 
+**View**
+
+*Como em qualquer outro MVC de PHP, você faz o seu view em HTML com auxílio de javascript e css, talvez use bootstrap, etc. Aqui não é diferente, haja vista que no arquivo ***config.php*** você tem todas as configurações de pastas assets onde estarão alojados esses mesmos arquivos.*
+
 # Você também pode colaborar!
 Colabore com o projeto e ajude o mesmo a se tornar um framework simples porém eficaz!
 
