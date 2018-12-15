@@ -1,25 +1,31 @@
 <?php
 class controller
 {
-	protected $db;
-	protected $tools;
-	protected $session;
+	// Métodos protegidos
+	protected $db; 			# instância do databse
+	protected $tools;		# instância do tools
+	protected $session; # instância do session
 
+	// Método construtor da classe
 	public function __construct()
 	{
 		global $config;
 
+		// Instância do tools
 		$this->tools = new Tools();
-		$this->db = $this->tools->pdoConnection();
+		$this->db = $this->tools->pdoConnection(); # realiza a conexão caso a mesma não esteja ativa
 
+		// Instância do Session
 		$this->session = new Session();
 	}
 
+	// Método de carregamento simples de uma view + dados
 	public function loadView($viewName, $viewData = array())
 	{
 		extract($viewData);
 		include APP_PATH . 'views/'.$viewName.'.phtml';
 	}
+
 
 	public function loadTemplate($viewName, $viewData = array())
 	{
