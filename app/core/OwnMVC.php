@@ -1,7 +1,9 @@
 <?php
+defined('BASE_PATH') OR exit('Sai pra lá jacaré!');
+
 include 'Controller.php';
 
-class SimpleMVC_Core extends Controller
+class OwnMVC extends Controller
 {
 	// Método que executa e roda o sistema MVC
 	public function execute_and_run()

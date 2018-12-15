@@ -1,7 +1,9 @@
 <?php
+defined('BASE_PATH') OR exit('Sai pra lá jacaré!');
+
 class sobrenosController extends controller
 {
-	
+
     public function __construct()
     {
         parent::__construct();
@@ -15,5 +17,5 @@ class sobrenosController extends controller
 		);
 
 		$this->loadTemplate('sobre-nos', $dados);
-    }	
+    }
 }

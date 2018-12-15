@@ -50,7 +50,7 @@
     <?php endif; ?>
 
     <h3>Se preferir, mande uma mensagem</h3>
-    <form name="sentMessage" id="contactForm" method="POST" action="/contato/enviar">
+    <?php echo $this->forms->form_init('sentMessage', 'contactForm', '/contato/enviar'); ?>
       <div class="control-group form-group">
         <div class="controls">
           <label>Seu nome completo:</label>

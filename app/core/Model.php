@@ -1,9 +1,12 @@
 <?php
+defined('BASE_PATH') OR exit('Sai pra lá jacaré!' . __FILE__);
+
 class model
 {
   protected $db;
   protected $tools;
   protected $session;
+  protected $forms;
 
   public function __construct()
   {
@@ -13,5 +16,7 @@ class model
     $this->db = $this->tools->pdoConnection();
 
     $this->session = new Session();
+
+    $this->forms = new Forms();
   }
 }

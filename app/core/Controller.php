@@ -1,10 +1,13 @@
 <?php
+defined('BASE_PATH') OR exit('Sai pra lá jacaré!');
+
 class controller
 {
 	// Métodos protegidos
 	protected $db; 			# instância do databse
 	protected $tools;		# instância do tools
 	protected $session; # instância do session
+	protected $forms;		# instância do forms
 
 	// Método construtor da classe
 	public function __construct()
@@ -17,6 +20,9 @@ class controller
 
 		// Instância do Session
 		$this->session = new Session();
+
+		// Instância do forms
+		$this->forms = new Forms();
 	}
 
 	// Método de carregamento simples de uma view + dados

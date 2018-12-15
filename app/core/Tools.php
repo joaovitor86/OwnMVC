@@ -1,4 +1,6 @@
 <?php
+defined('BASE_PATH') OR exit('Sai pra lá jacaré!');
+
 class Tools
 {
   protected $db;
@@ -25,7 +27,7 @@ class Tools
   public function pdoConnection()
   {
     global $config;
-    
+
     try
     {
       $this->db = new PDO("mysql:dbname=".$config['dbname'].";host=".$config['host'], $config['dbuser'], $config['dbpass']);

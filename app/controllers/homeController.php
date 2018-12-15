@@ -1,4 +1,6 @@
 <?php
+defined('BASE_PATH') OR exit('Sai pra lá jacaré!');
+
 class homeController extends controller
 {
 
