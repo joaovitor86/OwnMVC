@@ -42,6 +42,7 @@ class meucontrollerController extends controller
 
 **Model**
 
+*Você pode usar o PDO para realizar consultas ao banco de dados*
 
 ```php
 <?php
