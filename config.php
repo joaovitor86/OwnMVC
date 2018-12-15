@@ -2,13 +2,13 @@
 # Configurações padrão do sistema / site
 define("NOME_SITE",   		"Fábrica de Bicicletas");
 define("ENVIRONMENT", 		"development"); //development OU production
-define("BASE",        		"http://localhost/");
+define("BASE",        		"http://192.168.0.143/");
 
 # Controller padrão
 define("DEFAULT_CONTROLLER", ""); //deixar em branco caso use o padrão (homeController)
 
 # Configurações de Banco de dados
-define("DBNAME", "db_sejadigital");
+define("DBNAME", "db_ownmvc");
 define("HOST",   "localhost");
 define("DBUSER", "root");
 define("DBPASS", "");
