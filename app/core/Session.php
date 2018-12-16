@@ -34,7 +34,7 @@ class Session
    */
   public function checkStatus($name)
   {
-    if(isset($_SESSION[$name]))
+    if(isset($_SESSION[$name]) && !empty($_SESSION[$name]))
     {
       return true;
     }
