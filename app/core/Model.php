@@ -8,6 +8,9 @@ class model
   protected $session;
   protected $forms;
 
+  /**
+   * [__construct description]
+   */
   public function __construct()
   {
     global $config;

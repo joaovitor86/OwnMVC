@@ -9,7 +9,9 @@ class controller
 	protected $session; # instância do session
 	protected $forms;		# instância do forms
 
-	// Método construtor da classe
+	/**
+	 * [__construct description]
+	 */
 	public function __construct()
 	{
 		global $config;
@@ -25,23 +27,36 @@ class controller
 		$this->forms = new Forms();
 	}
 
-	// Método de carregamento simples de uma view + dados
+	/**
+	 * [loadView description]
+	 * @param  [type] $viewName [description]
+	 * @param  array  $viewData [description]
+	 * @return [type]           [description]
+	 */
 	public function loadView($viewName, $viewData = array())
 	{
 		extract($viewData);
 		include APP_PATH . 'views/'.$viewName.'.phtml';
 	}
 
-	// Método de carregamento de template + dados
-	// template esse que foi configurado lá no config.php
+	/**
+	 * [loadTemplate description]
+	 * @param  [type] $viewName [description]
+	 * @param  array  $viewData [description]
+	 * @return [type]           [description]
+	 */
 	public function loadTemplate($viewName, $viewData = array())
 	{
 		extract($viewData);
 		include APP_PATH . TEMPLATEBASE;
 	}
 
-	// Método de carregamento de uma view dentro de um template, similar ao método
-	// loadView
+	/**
+	 * [loadViewInTemplate description]
+	 * @param  [type] $viewName [description]
+	 * @param  array  $viewData [description]
+	 * @return [type]           [description]
+	 */
 	public function loadViewInTemplate($viewName, $viewData = array())
 	{
 		extract($viewData);

@@ -5,7 +5,10 @@ include 'Controller.php';
 
 class OwnMVC extends Controller
 {
-	// Método que executa e roda o sistema MVC
+	/**
+	 * [execute_and_run description]
+	 * @return [type] [description]
+	 */
 	public function execute_and_run()
 	{
 		$url 		= explode("index.php", $_SERVER["PHP_SELF"]);

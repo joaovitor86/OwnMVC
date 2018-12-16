@@ -6,6 +6,9 @@ class Session
   protected $db;
   protected $tools;
 
+  /**
+   * [__construct description]
+   */
   public function __construct()
   {
     if(session_status() === PHP_SESSION_NONE)
@@ -24,6 +27,11 @@ class Session
     ));
   }// __construct()
 
+  /**
+   * [checkStatus description]
+   * @param  [type] $name [description]
+   * @return [type]       [description]
+   */
   public function checkStatus($name)
   {
     if(isset($_SESSION[$name]))
@@ -36,6 +44,11 @@ class Session
     }
   }// checkStatus()
 
+  /**
+   * [getValue description]
+   * @param  [type] $name [description]
+   * @return [type]       [description]
+   */
   public function getValue($name)
   {
     if($this->checkStatus($name) === true)
@@ -48,6 +61,10 @@ class Session
     }
   }// getValue()
 
+  /**
+   * [setValue description]
+   * @param [type] $params [description]
+   */
   public function setValue($params)
   {
     if(is_array($params))
@@ -65,6 +82,10 @@ class Session
     }// setValue()
   }
 
+  /**
+   * [unsetValue description]
+   * @param [type] $name [description]
+   */
   public function unsetValue($name)
   {
     if($this->checkStatus($name) === true)

@@ -5,16 +5,30 @@ class Tools
 {
   protected $db;
 
+  /**
+   * [navigate description]
+   * @param  string $url [description]
+   * @return [type]      [description]
+   */
   public function navigate(string $url = "")
   {
     return header("Location: " . $url);
   }
 
+  /**
+   * [error404 description]
+   * @return [type] [description]
+   */
   public function error404()
   {
     return "<p><small>404</small>Que coisa mais estranha!</p>";
   }
 
+  /**
+   * [noinject description]
+   * @param  [type] $sql [description]
+   * @return [type]      [description]
+   */
   public function noinject($sql)
   {
     $sql = preg_replace(sql_regcase("/(from|select|insert|delete|where|drop table|show tables|#|\*|--|\\\\)/"), "" ,$sql); // remove palavras que contenham sintaxe sql
@@ -24,6 +38,10 @@ class Tools
     return $sql;
   }
 
+  /**
+   * [pdoConnection description]
+   * @return [type] [description]
+   */
   public function pdoConnection()
   {
     global $config;

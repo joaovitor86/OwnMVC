@@ -2,7 +2,7 @@
 # Configurações padrão do sistema / site
 define("NOME_SITE",   		"Fábrica de Bicicletas");
 define("ENVIRONMENT", 		"development"); //development OU production
-define("BASE",        		"http://192.168.0.143/");
+define("BASE",        		"http://127.0.0.1/");
 
 # Controller padrão
 define("DEFAULT_CONTROLLER", ""); //deixar em branco caso use o padrão (homeController)
