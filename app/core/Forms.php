@@ -57,14 +57,21 @@ class Forms
     return "<textarea " . trim($add) . "></textarea>";
   }
 
-  public function combobox($params = array(), $selects = array())
+  public function combobox($params = array(), $options = array())
   {
-    $add = '';
+    $adicionais = '';
     foreach($params as $key => $val)
     {
-      $add .= ''.$key.'="'.$val.'" ';
+      $adicionais .= ''.$key.'="'.$val.'" ';
     }
-    return "<textarea " . trim($add) . "></textarea>";
+
+    $select_options = '';
+    foreach ($options as $key => $val)
+    {
+      $select_options .= '<option value="'.$key.'">'.$val.'</option>';
+    }
+
+    return "<select " . trim($adicionais) . ">".trim($select_options)."</select>";
   }
 
 }

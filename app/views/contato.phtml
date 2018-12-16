@@ -54,10 +54,41 @@
       <div class="control-group form-group">
         <div class="controls">
           <label>Seu nome completo:</label>
+
           <input name="nome" type="text" class="form-control" id="nome" required data-validation-required-message="Por favor, insira seu nome completo.">
           <p class="help-block"></p>
         </div>
       </div>
+
+      <div class="control-group form-group">
+        <div class="controls">
+          <label>Sua cidade (opicional):</label>
+          <?php
+          for($i = 1; $i < 28; $i++)
+          {
+            $arrayNomeCidades[$i] = 'Nome da cidade '.$i;
+          }
+          echo $this->forms->combobox(
+            array(//config do combobox
+              'class' => 'form-control',
+              'name' => 'comboCidades',
+              'id' => 'comboCidades'
+            ),
+            $arrayNomeCidades
+            /*
+            ou fazer dessa forma também:
+            
+            array(//config dos selects
+              'sao_paulo' => 'São Paulo',
+              'rio_janeiro' => 'Rio de Janeiro',
+              'bahia' => 'Bahia'
+            )
+            */
+          );
+          ?>
+        </div>
+      </div>
+
       <div class="control-group form-group">
         <div class="controls">
           <label>Seu(s) telefone(s):</label>
